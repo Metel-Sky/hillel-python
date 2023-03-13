@@ -3,7 +3,7 @@ Python learning material for base group
 
 Today is first lecture
 
-#1 Правила наименования переменных в Python
+# Правила наименования переменных в Python
 
 `snake case` - для названия переменных, функции. Все маленькие буквы, соединённые _ вместо пробелов
 
