@@ -1,17 +1,12 @@
 
 
 
-
-
-
-
-
 # user = input("Введіть строку: ")
 # low = user.lower()  # перевод в нижній регістр
 # string = ''.join(e for e in low if e.isalnum())  # видаляє розділові знаки
 # length = len(string)
 #
-# for i in range(length // 2):  # перевіряэмо чи є строка паліндромом
+# for i in range(length // 2):  # перевіряємо чи є строка паліндромом
 #     if string[i] != string[length - i - 1]:
 #         print("Строка не є паліндромом")
 #         break
