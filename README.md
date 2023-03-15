@@ -1,7 +1,6 @@
 # learn-python-hillel
-Python learning material for base group
+Python learning material 
 
-### Today is first lecture
 
 # Правила наименования переменных в Python
 
