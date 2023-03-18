@@ -1,6 +1,6 @@
 
-
-
+z = 3
+print(f'Is Z integer? {isinstance(z, int)}')
 
 
 
