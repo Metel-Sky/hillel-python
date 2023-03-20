@@ -33,10 +33,10 @@ if __name__ == '__main__':
 
     if check_triangle(a, b, c):
         perimeter = calculate_perimeter(a, b, c)
-        area = calculate_area(a, b, c)
+        area = round(calculate_area(a, b, c),2)
 
         print(f"Трикутник існує зі сторонами {a}, {b}, {c}")
         print(f"Периметр трикутника: {perimeter}")
-        print(f"Площа трикутника: {round(area, 2)}")
+        print(f"Площа трикутника: {area}")
     else:
         print(f"ВСЕ ПРОПАЛО!!! Трикутника зі сторонами {a}, {b}, {c} не існує")
