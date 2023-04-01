@@ -1,7 +1,11 @@
 
 
-with open('input.txt') as f:
-    lines = [line.strip('\n').split('a', 1)[-1] for line in f.readlines()]
+# зчитуємо вміст файлу та розділяємо на лінії
+lines = [line.strip("\n") for line in open("input.txt", "r")]
 
-output = [line.capitalize() for line in lines if line != '']
-print(output)
+# застосовуємо перетворення до кожної лінії використовуючи list comprehension
+result = [line[line.find("a"):] if "a" in line else "" for line in lines]
+result = [line.capitalize() for line in result]
+
+# результат
+print(result)
