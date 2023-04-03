@@ -7,21 +7,9 @@
 # exit -
 
 
-def text_file_writeline(file_handler, text_to_write: list):
-    # записывает в файл список строк
-    # плюсы: сразу много текста
-    # минусы: не ставит перенос на новую строку
-    file_handler.writelines(text_to_write)
-
-
 def text_file_write(file_handler, text_to_write: str):
     # записывает в файл просто строку
     file_handler.write(text_to_write)
-
-    # искусственное создание ошибки
-    # Как сообщить об ошибке
-    # как сделать так, чтобы программа думала что у нее ошибка
-    # raise ValueError("Здесь произошло что-то не так")
 
 
 def notes():
