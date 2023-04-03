@@ -66,14 +66,6 @@ def notes():
                 print(note)
 
 
-        # elif command == "exit":
-        #     # Записуємо нотатки в файл і виходимо з програми
-        #     with open('notes.txt', 'w', encoding='utf-8') as f:
-        #         f.write('')
-        #         text_file_writeline(f, notes_list)
-        #         print("Збережено в файлі.")
-        #     return
-
         elif command == "save&exit":
             # Записуємо нотатки в файл і виходимо з програми
             with open('notes.txt', 'a', encoding='utf-8') as f:
