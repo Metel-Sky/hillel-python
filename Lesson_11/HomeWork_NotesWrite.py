@@ -6,19 +6,36 @@
 # earliest - Від найранішої до найпізнішої
 # exit -
 
+# def text_file_writeline(file_handler, text_to_write: list):
+#     # Записує в файл список строк
+#     # Плюси: можна записувати багато тексту одразу
+#     # Мінуси: не ставить перенос на нову строку
+#     for line in text_to_write:
+#         file_handler.write(line + '\n')
 
+def text_file_writeline(file_handler, text_to_write: list):
+    # записывает в файл список строк
+    # плюсы: сразу много текста
+    # минусы: не ставит перенос на новую строку
+    for line in text_to_write:
+        file_handler.write(line.rstrip() + '\n')
+
+add
 def text_file_write(file_handler, text_to_write: str):
-    # записывает в файл просто строку
+    # Записує в файл просто строку
     file_handler.write(text_to_write)
 
 
 def notes():
-    with open('my_file', encoding='utf-8') as read_f:
-        notes_list = read_f.readlines()[:]
+    # Зчитуємо нотатки з файлу, якщо він існує
+    try:
+        with open('notes.txt', encoding='utf-8') as read_f:
+            notes_list = read_f.readlines()
+    except FileNotFoundError:
+        notes_list = []
 
     while True:
-        command = input("доступні команди: add, "
-                        "shortest,  longest, latest, earliest, exit > ").lower()
+        command = input("Доступні команди: add, shortest, longest, latest, earliest, save&exit > ").lower()
 
         if command == "add":
             note = input("Введіть нотатку: ")
@@ -26,13 +43,13 @@ def notes():
 
         elif command == "earliest":
             sorted_notes = sorted(notes_list)
-            print("Від найранішої до найпізнішої:")
+            print("Від найдавнішої до найновішої:")
             for note in sorted_notes:
                 print(note)
 
         elif command == "latest":
             sorted_notes = sorted(notes_list, reverse=True)
-            print("Від найпізнішої до найранішої:")
+            print("Від найновішої до найдавнішої:")
             for note in sorted_notes:
                 print(note)
 
@@ -48,15 +65,26 @@ def notes():
             for note in sorted_notes:
                 print(note)
 
-        elif command == "exit":
-            with open('my_file', 'a', encoding='utf-8') as f:
+
+        # elif command == "exit":
+        #     # Записуємо нотатки в файл і виходимо з програми
+        #     with open('notes.txt', 'w', encoding='utf-8') as f:
+        #         f.write('')
+        #         text_file_writeline(f, notes_list)
+        #         print("Збережено в файлі.")
+        #     return
+
+        elif command == "save&exit":
+            # Записуємо нотатки в файл і виходимо з програми
+            with open('notes.txt', 'a', encoding='utf-8') as f:
                 text_file_write(f, '\n')
-                for note in notes_list:
-                    text_file_write(f, note + '\n')
+                text_file_writeline(f, notes_list)
+                print("Збережено в файлі.")
             break
 
         else:
-            print("Невідома команда")
+            print("Невідома команда.")
+
 
 if __name__ == '__main__':
     notes()
