@@ -1,0 +1,14 @@
+C:\Users\Vinch>cd C:\Users\Vinch\Desktop\Python  
+(cd)-команда для перехода в папку, после нее пробел и полный путь в папку
+
+C:\Users\Vinch\Desktop\Python>python test1.py
+так запускается файл питона
+
+Введите свое имя: alex 
+
+C:\Users\Vinch\Desktop\Python>
+
+
+pyinstaller -F calc.py (Команда компилил .ex файлик) запускать в терминале в дериктории с файлом .py
+
+cls - очистить консольd
