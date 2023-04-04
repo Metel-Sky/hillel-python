@@ -20,7 +20,7 @@ def text_file_writeline(file_handler, text_to_write: list):
     for line in text_to_write:
         file_handler.write(line.rstrip() + '\n')
 
-add
+
 def text_file_write(file_handler, text_to_write: str):
     # Записує в файл просто строку
     file_handler.write(text_to_write)
