@@ -9,7 +9,7 @@ print(a, b)
 
 a = 2
 b = 2.5
-print(a, b)
+print(a,  b)
 print(type(a), type(b))
 
 a = 2 + 5

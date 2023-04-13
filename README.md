@@ -70,6 +70,7 @@ z = 3
 print(f'Is Z integer? {isinstance(z, int)}')
 >>> Is Z integer? True
 ```
+`id() ` - показывает адресс объекта в оперативной памяти
 
 
 
