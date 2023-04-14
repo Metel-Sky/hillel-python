@@ -29,7 +29,7 @@ class Cat:
     def meow(self):
         print(self.name + " мявчить!")
 
-    def go_for_a_walk(self):
+    def walk(self):
         self.is_playing = True
         self.boredom_level = 10
         print(self.name + " збирається на прогулянку.")
@@ -65,7 +65,7 @@ for cat in cats:
     if random.random() < 0.5:
         cat.meow()
     if random.random() < 0.5:
-        cat.go_for_a_walk()
+        cat.walk()
     if cat.is_hungry:
         print(cat.name + " дуже голодний(на)!")
     if not cat.is_playing:
