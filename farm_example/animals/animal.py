@@ -84,6 +84,8 @@ class Animal:
             print(f"{self.name} голодное!")
 
 
+
+
 if __name__ == '__main__':
     a = Animal(None, {None}, None)
     # int(a)
