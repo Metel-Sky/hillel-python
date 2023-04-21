@@ -3,19 +3,19 @@ from random import choices
 
 
 if __name__ == '__main__':
-    a = Animal('Чупакабра', {'???'}, -1)
-    print(a, type(a))
-    a.say()
-    a.eat('печенька')
-    a.treat()
-    a.name = 'Не Чупакабра'
-    a.age = 5
-    print(a.hungry)
-    a.eat('???')
-    print(a.hungry)
-    a.hungry = 10
-    print(a)
-    a.say()
+    # a = Animal('Чупакабра', {'???'}, -1)
+    # print(a, type(a))
+    # a.say()
+    # a.eat('печенька')
+    # a.treat()
+    # a.name = 'Не Чупакабра'
+    # a.age = 5
+    # print(a.hungry)
+    # a.eat('???')
+    # print(a.hungry)
+    # a.hungry = 10
+    # print(a)
+    # a.say()
 
     farm_animals = [
         Dog('Напас', {'мясо', 'сало', 'борщ'}, 14),
