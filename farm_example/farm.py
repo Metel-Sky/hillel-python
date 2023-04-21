@@ -1,4 +1,4 @@
-from animals import Animal, Dog, Hen, Cow
+from animals import Animal, Dog, Hen, Cow, Cat
 from random import choices
 
 
@@ -20,11 +20,12 @@ if __name__ == '__main__':
     farm_animals = [
         Dog('Напас', {'мясо', 'сало', 'борщ'}, 14),
         Hen('Ряба', {"пшено", "крупа", "вода"}, 2),
-        Cow('Бурёнка', {"трава", "сено"}, 5)
+        Cow('Бурёнка', {"трава", "сено"}, 5),
+        Cat('Мурзилка', {"вискас", "мышка","вода"}, 7)
     ]
 
     # пример полиморфизма - одинаковые названия функций, но разные классы и разная логика выполнения.
-    food_to_offer = ['мясо', 'сало', 'борщ', "пшено", "крупа", "вода", "трава", "сено"]
+    food_to_offer = ['мясо', 'сало', 'борщ', "пшено", "крупа", "вода", "трава", "сено","вискас", "мышка"]
     what_we_lost = list()
     what_we_get = list()
     for animal in farm_animals:
@@ -43,7 +44,7 @@ if __name__ == '__main__':
         # if type(animal) == Dog
         # то же самое, что и выше, но рекомендуется сравнивать типы именно через isinstance
         if isinstance(animal, Animal):
-            print(f'Найден представитель типа данных Animal: {animal}')
+            print(f'\nНайден представитель типа данных Animal: {animal}')
             if animal.hungry:
                 print(f"На вашей ферме голодное животное! {animal}")
         else:

@@ -15,7 +15,6 @@ class Animal:
         self.name = name
         self.preferred_food = preferred_food
         self.age = age
-
         self.say_word = "???"
         self.animal_type = "Животное"
         # Уровни доступа (Инкапсуляция)
@@ -23,6 +22,8 @@ class Animal:
         # _protected - доступен только классу и его наследникам
         # __private = доступен только самому классу
         self.__hungry = True
+
+        self.just_ate = False# Перевірка їла тваринка чи ні
 
         # все поля класса должны задаваться в его конструкторе
         # представьте что какое-то свойство задаётся в одном методе, а используется в другом
