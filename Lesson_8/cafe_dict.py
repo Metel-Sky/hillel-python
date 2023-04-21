@@ -1,6 +1,6 @@
 
 
-from Lesson_7.input_number import get_user_int
+from Lesson_007.input_number import get_user_int
 
 MENU = [
     ('Чай', 10),
